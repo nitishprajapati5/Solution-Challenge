@@ -1,39 +1,18 @@
 import 'package:flutter/material.dart';
-import 'splash_screen/splash_screen.dart'; // Import your splash screen
-import 'screens/screen1.dart'; // Import your main screen
-import 'screens/screen2.dart'; // Import your next screen
+import 'package:mindfuldost_hub/splash_screen/splash_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: FutureBuilder(
-        // Simulate loading for the splash screen
-        future: Future.delayed(Duration(seconds: 3)), // Adjust the duration as needed
-        builder: (context, snapshot) {
-          switch (snapshot.connectionState) {
-            case ConnectionState.none:
-            case ConnectionState.waiting:
-              // Return the splash screen while it's loading
-              return splash_screen();
-              
-            default:
-              // Once the splash screen is done, navigate to the main screen
-              return Navigator(
-                onGenerateRoute: (settings) {
-                  return MaterialPageRoute(
-                    builder: (context) => NextScreen1(),
-                  );
-                },
-              );
-              
-          }
-        },
-      ),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
     );
   }
 }
