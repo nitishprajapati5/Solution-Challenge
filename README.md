@@ -8,4 +8,4 @@ This Application is running with Backend Services in Node JS and MSSQL as Databa
 
 [https://github.com/nitishprajapati5/Solution-Challenge-Backend].
 
-The Purpose to keep Backend at different repository is the due to path issue that we were facing during the process when we were keeping both the Repository in Same Repository.
+The Purpose to keep Backend at different repository is the due to path issue that we were facing during the process when we were keeping both the Repository in the current Repository.
