@@ -2,8 +2,6 @@
 
 A Flutter Project based on Mental Health and Assessment.
 
-## Getting Started
-
 ## With Reference to Services 
 
 This Application is running with Backend Services in Node JS and MSSQL as Database the Repository link is as follows:
