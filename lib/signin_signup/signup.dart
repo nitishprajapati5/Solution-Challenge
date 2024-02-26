@@ -241,6 +241,7 @@ class _SignupPageState extends State<SignupPage> {
 
                     APIService.register(model).then((Response) {
                       // Continue with your sign-up logic here
+                      print(Response);
                       if (Response) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
@@ -256,7 +257,7 @@ class _SignupPageState extends State<SignupPage> {
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            content: Text('Failed to register the account'),
+                            content: Text('Registration Sucessful please login to the account.'),
                           ), // Navigator.pop(context);
                         );
                       }
