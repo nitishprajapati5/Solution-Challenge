@@ -1,6 +1,6 @@
-# flutter_application_2
+# Flutter Application
 
-A new Flutter project.
+A Flutter Project based on Mental Health and Assessment.
 
 ## Getting Started
 
