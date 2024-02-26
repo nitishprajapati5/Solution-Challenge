@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:vibration/vibration.dart';
+// import 'package:mindfuldost_hub/main.dart';
 
 
 class WeightPage extends StatefulWidget {
+  final Color backgroundColor;
+  WeightPage({this.backgroundColor =const Color(0xff251404)});
   @override
   _WeightPageState createState() => _WeightPageState();
 }
@@ -21,11 +24,12 @@ class _WeightPageState extends State<WeightPage> {
 
   @override
   Widget build(BuildContext context) {
-    const title = 'Horizontal List';
+    const title = 'Weight';
 
     return MaterialApp(
       title: title,
       home: Scaffold(
+        backgroundColor: const Color(0xff251404),
         appBar: AppBar(
           title: const Text(title),
         ),
@@ -36,7 +40,8 @@ class _WeightPageState extends State<WeightPage> {
             children: [
               Text(
                 'What\'s your weight?',
-                style: TextStyle(fontSize: 40),
+                style: TextStyle(fontSize: 40,
+                color: Colors.white),
               ),
               SizedBox(height: 20),
               Container(
@@ -60,7 +65,7 @@ class _WeightPageState extends State<WeightPage> {
                             Container(
                               width: 2,
                               height: 20,
-                              color: Colors.black, // Bold line
+                              color: const Color.fromARGB(255, 216, 203, 203), // Bold line
                             ),
                             SizedBox(height: 5),
                             Container(
@@ -69,8 +74,8 @@ class _WeightPageState extends State<WeightPage> {
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: _weight == _weights[index]
-                                    ? Color.fromARGB(255, 160, 72, 72)
-                                    : Colors.transparent,
+                                    ? Color.fromARGB(255, 209, 45, 45)
+                                    : Color.fromARGB(255, 176, 168, 168),
                               ),
                               alignment: Alignment.center,
                               child: Text(
@@ -78,8 +83,8 @@ class _WeightPageState extends State<WeightPage> {
                                 style: TextStyle(
                                   fontSize: _weight == _weights[index] ? 24 : 16,
                                   color: _weight == _weights[index]
-                                      ? Colors.white
-                                      : Colors.black,
+                                      ? Colors.red
+                                      : Colors.white,
                                 ),
                               ),
                             ),
@@ -87,7 +92,7 @@ class _WeightPageState extends State<WeightPage> {
                             Container(
                               width: 2,
                               height: 20,
-                              color: Colors.black, // Bold line
+                              color: const Color.fromARGB(255, 236, 234, 234), // Bold line
                             ),
                           ],
                         ),
@@ -103,7 +108,7 @@ class _WeightPageState extends State<WeightPage> {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: Colors.black,
+                    color: const Color.fromARGB(255, 222, 212, 212),
                     width: 2,
                   ),
                 ),
@@ -112,7 +117,7 @@ class _WeightPageState extends State<WeightPage> {
                     _weight.toString(),
                     style: TextStyle(
                       fontSize: 20,
-                      color: Colors.black,
+                      color: const Color.fromARGB(255, 230, 219, 219),
                     ),
                   ),
                 ),

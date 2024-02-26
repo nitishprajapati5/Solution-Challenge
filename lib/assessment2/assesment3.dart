@@ -17,7 +17,7 @@ class _HelpScreenState extends State<HelpScreen> {
         title: Text('Help Screen'),
       ),
       body: Container(
-        color: Colors.grey[200],
+        // color: Colors.grey[200],
         padding: EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
@@ -26,24 +26,27 @@ class _HelpScreenState extends State<HelpScreen> {
               style: TextStyle(
                 fontSize: 36.0,
                 fontWeight: FontWeight.bold,
+                color: Colors.blue,
               ),
             ),
-            SizedBox(height: 16.0),
+            SizedBox(height: 30.0),
             Text(
               'Assessment',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 20.0,
+                fontSize: 40.0,
+                color: Colors.blue,
               ),
             ),
-            SizedBox(height: 16.0),
+            SizedBox(height: 30.0),
             Text(
               'Have you sought professional help before?',
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 22.0,
+                color: Colors.blue,
               ),
             ),
-            SizedBox(height: 16.0),
+            SizedBox(height: 40.0),
             Row(
               children: <Widget>[
                 Expanded(

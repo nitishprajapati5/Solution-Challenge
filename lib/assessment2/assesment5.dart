@@ -21,7 +21,7 @@ Widget build(BuildContext context) {
 
         Text( 
           'How would you rate your sleep quality?',
-        style: TextStyle(fontSize: 24)
+        style: TextStyle(fontSize: 24,color: Colors.orange,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontFamily: 'Roboto')
         ),
         SizedBox(height: 60),
         Container(
@@ -51,7 +51,7 @@ Widget build(BuildContext context) {
        thumbIcon: Icon(Icons.bedtime),
        showDividers: true,
        activeColor: Colors.orange,
-        inactiveColor: Color.fromARGB(255, 48, 60, 3).withOpacity(0.5),
+        inactiveColor: Color.fromARGB(255, 167, 207, 22).withOpacity(0.5),
        onChanged: (dynamic values){
          setState(() {
             _selectvalue = values as double;
@@ -62,7 +62,7 @@ Widget build(BuildContext context) {
         ),
       SizedBox(height: 80),
       Text('You selected: $_selectvalue hours',
-      style: TextStyle(fontSize: 18)),
+      style: TextStyle(fontSize: 18,color: Colors.orange,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontFamily: 'Roboto')),
       SizedBox(height: 20),
       ElevatedButton(
        onPressed: () {

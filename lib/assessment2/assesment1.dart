@@ -35,15 +35,17 @@ class _MentalHealthAssessmentScreenState
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('What\'s your health goal today?'),
+                  Text('What\'s your health goal today?',
+                    style: TextStyle(color: Colors.white,fontSize: 30),),
+                  
                   SizedBox(height: 16.0),
                   Column(
                     children: [
-                      _buildRadioButton('I wanna reduce stress'),
-                      _buildRadioButton('I wanna try Al Therapy'),
-                      _buildRadioButton('I want to cope with trauma'),
-                      _buildRadioButton('I want to be a better person'),
-                      _buildRadioButton('Just trying out the app, mate!'),
+                      _buildRadioButton('I wanna reduce stress',Colors.white),
+                      _buildRadioButton('I wanna try Al Therapy',Colors.white),
+                      _buildRadioButton('I want to cope with trauma',Colors.white),
+                      _buildRadioButton('I want to be a better person',Colors.white),
+                      _buildRadioButton('Just trying out the app, mate!',Colors.white),
                     ],
                   ),
                 ],
@@ -71,7 +73,7 @@ class _MentalHealthAssessmentScreenState
     );
   }
 
-  Widget _buildRadioButton(String label) {
+  Widget _buildRadioButton(String label,Color color) {
     return Row(
       children: [
         Radio(
@@ -83,8 +85,10 @@ class _MentalHealthAssessmentScreenState
               _previousSelection = value as String?;
             });
           },
+          activeColor: color,
         ),
-        Text(label),
+        Text(label,
+        style: TextStyle(color: Colors.white),),
       ],
     );
   }

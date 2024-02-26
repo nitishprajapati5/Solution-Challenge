@@ -53,4 +53,27 @@ var url=Uri.parse(config.registerurl);
     }
 
   }
+//   static Future<String> getUserProfile() async{
+//     var loginDetails = await SharedService.getLoginDetails();
+//     Map<String,String> requestHeaders = {
+//       'Content-Type':'application/json',
+//       'Authorization':'Basic ${loginDetails!.}'
+      
+//     };
+// var url=Uri.parse(config.appname);
+//     var response = await client.get(
+//       url,
+//       headers: requestHeaders,
+//       );
+    
+//     if(response.statusCode == 200 ){
+//       // shared
+//       await response.body;
+//       // print(response.body);
+//       return response.body;
+//     }else{
+//       return '';
+//     }
+
+//   }
 }

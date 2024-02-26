@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 
 class MoodScreen extends StatefulWidget {
+  
   @override
   _MoodScreenState createState() => _MoodScreenState();
 }
@@ -26,11 +27,12 @@ class _MoodScreenState extends State<MoodScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: const Color(0xff251404),
       appBar: AppBar(
         title: Text('Mood Screen'),
       ),
       body: Container(
-        color: Colors.grey[200],
+        // color: const Color.fromARGB(255, 133, 60, 60),
         padding: EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[

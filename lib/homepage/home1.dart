@@ -39,12 +39,6 @@ class _MyTabBarState extends State<MyTabBar1> with SingleTickerProviderStateMixi
     _tabController = TabController(length: 3, vsync: this);
   }
   @override
-// void dispose() {
-//   _tabController.dispose();
-//   super.dispose();
-// }
-
-  @override
   Widget build(BuildContext context){
     return DefaultTabController(
         length: 3,
@@ -169,8 +163,11 @@ class _HomeTabState extends State<HomeTab> {
           Image.asset('assets/images/loading screen3/frame2.png', width: 485, height: 70),
         ],
       ),
+
        ],
+       
       ),
+      
        );
   
     // );
@@ -201,7 +198,8 @@ class ChatTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text('Chat Tab'),
+        child: Text('Chat Tab',
+        style: TextStyle(color: Colors.blue,fontSize: 25),),
       ),
     );
   }
@@ -209,9 +207,47 @@ class ChatTab extends StatelessWidget {
 class AssesmentTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text('Assesment Tab'),
+    return Scaffold(
+      
+      body: Container(
+        padding: EdgeInsets.all(55.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'Assessment Test',
+              style: TextStyle(fontSize: 34.0, fontWeight: FontWeight.bold,color: Colors.white),
+              textAlign: TextAlign.center,
+            ),
+            // SizedBox(height: 16.0),
+            // Expanded(child:Center(
+            //   child: Image.asset(
+            //     'assets/images/assesment/assesment.png', // Replace with your image path
+            //     width: 200,
+            //     height: 200,
+            //   ),
+            // ),
+            // ),
+            
+            SizedBox(height: 200.0),
+            Text(
+              'Step into the realm of self-discovery.\n The journey to better mental health begins with a single assessment.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 35.0,color: Colors.green),
+            ),
+            SizedBox(height: 100.0),
+            ElevatedButton(
+              onPressed: () {
+                // Add functionality for the continue button
+                Navigator.pushReplacementNamed(context,'/assesment1');
+                
+              },
+              child: Text('Continue',
+              style: TextStyle(fontSize: 24.0),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

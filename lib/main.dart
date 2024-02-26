@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mindfuldost_hub/services/share_service.dart';
 import 'splash_screen/splash_screen.dart'; // Import your splash screen
 import 'package:mindfuldost_hub/screens/screen1.dart';
 import 'package:mindfuldost_hub/screens/screen2.dart';
@@ -24,8 +25,16 @@ import 'package:mindfuldost_hub/homepage/home1.dart';
 
 // import 'splash_screen/dem01.dart'; // Import your splash screen
 // import 'homepage/home1.dart'; // Import your home screen
+Widget _defaultHome=const SignInPage();
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  bool _result =await SharedService.isLoggedIn();
+  if (_result) {
+    _defaultHome = Homepage(username: 'User');
+    
+  }
   runApp(MyApp());
 }
 
@@ -35,7 +44,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor:const Color(0xff251404),
+        scaffoldBackgroundColor:Color.fromRGBO(37, 20, 4, 1),
         
         // Add any other theme configurations as needed
       ),
@@ -61,6 +70,7 @@ class MyApp extends StatelessWidget {
         '/assesment6': (context) =>  medications(),
         // '/home1': (context) =>  Homepage(username: 'User'),        
         '/home1': (context) =>  Homepage(username: 'User'),
+        // '/':(context) => _defaultHome,
       },
     );
   }

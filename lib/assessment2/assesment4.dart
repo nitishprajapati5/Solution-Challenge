@@ -18,7 +18,7 @@ class _DistressScreenState extends State<DistressScreen> {
         title: Text('Distress Screen'),
       ),
       body: Container(
-        color: Colors.grey[200],
+        // color: Colors.grey[200],
         padding: EdgeInsets.all(16.0),
         child: Column(
           children: <Widget>[
@@ -27,6 +27,7 @@ class _DistressScreenState extends State<DistressScreen> {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20.0,
+                color: Colors.blue,
               ),
             ),
             SizedBox(height: 20.0),
@@ -34,6 +35,7 @@ class _DistressScreenState extends State<DistressScreen> {
               'Are you experiencing any physical distress?',
               style: TextStyle(
                 fontSize: 20.0,
+                color: Colors.blue,
               ),
             ),
             SizedBox(height: 20.0),
@@ -49,7 +51,7 @@ class _DistressScreenState extends State<DistressScreen> {
                     child: Container(
                       height: 30.0,
                       decoration: BoxDecoration(
-                        color: _physicalDistress ? Colors.blue[200] : Colors.white,
+                        color: _physicalDistress ? Colors.blue[200] : Color.fromRGBO(37, 20, 4, 1),
                         borderRadius: BorderRadius.circular(8.0),
                         border: Border.all(color: Colors.blue),
                       ),
@@ -64,7 +66,7 @@ class _DistressScreenState extends State<DistressScreen> {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 30.0,
-                                color: _physicalDistress ? Colors.white : Colors.blue,
+                                color: _physicalDistress ? Color.fromRGBO(37, 20, 4, 1): Colors.blue,
                               ),
                             ),
                             SizedBox( height: 40),
@@ -74,7 +76,7 @@ class _DistressScreenState extends State<DistressScreen> {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15.0,
-                                color: _physicalDistress ? Colors.white : Colors.blue,
+                                color: _physicalDistress ? Color.fromRGBO(37, 20, 4, 1) : Colors.blue,
                               ),
                             ),
                           ],
@@ -95,7 +97,7 @@ class _DistressScreenState extends State<DistressScreen> {
                     child: Container(
                       height: 30.0,
                       decoration: BoxDecoration(
-                        color: _physicalDistress ? Colors.white : Colors.blue[200],
+                        color: _physicalDistress ? Color.fromRGBO(37, 20, 4, 1) : Colors.blue[200],
                         borderRadius: BorderRadius.circular(15.0),
                         border: Border.all(color: Colors.blue),
                       ),
@@ -104,13 +106,13 @@ class _DistressScreenState extends State<DistressScreen> {
                         Column(
                           children: <Widget>[
                             SizedBox( height: 80,),
-                        Icon(Icons.cancel_outlined, color: _physicalDistress ? Colors.blue : Colors.white, size: 50,), 
+                        Icon(Icons.cancel_outlined, color: _physicalDistress ? Colors.blue : Color.fromRGBO(37, 20, 4, 1), size: 50,), 
                         Text(
                           'No Physical Pain At All',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 30.0,
-                            color: _physicalDistress ? Colors.blue : Colors.white,
+                            color: _physicalDistress ? Colors.blue : Color.fromRGBO(37, 20, 4, 1),
                           ),
                         ),
                         SizedBox( height: 40,width: 20),
@@ -120,7 +122,7 @@ class _DistressScreenState extends State<DistressScreen> {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15.0,
-                                color: _physicalDistress ? Colors.blue : Colors.white,
+                                color: _physicalDistress ? Colors.blue : Color.fromRGBO(37, 20, 4, 1),
                               ),
                             ),
                           ],

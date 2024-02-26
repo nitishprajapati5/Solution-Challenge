@@ -7,6 +7,7 @@ class loginresponsemodel {
   String? messageCode;
   int? statusCode;
   Data? data;
+  
 
   loginresponsemodel(
       {this.message, this.messageCode, this.statusCode, this.data});
